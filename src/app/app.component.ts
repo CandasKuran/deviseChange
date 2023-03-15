@@ -20,6 +20,8 @@ import {MatDialog} from "@angular/material/dialog";
 })
 
 export class AppComponent {
+
+  title = "'Generation du devis'"
   Designation: string | undefined;
   ligneData = ELEMENT_DATA;
   groupData = GROUP_DATA;
@@ -29,10 +31,13 @@ export class AppComponent {
   expandedElement: GroupChiffrage | PeriodicElement | null;
 
 
+
+
   // @ts-ignore
   @ViewChild(MatTable) table: MatTable<GroupChiffrage>;
   // @ts-ignore
   @ViewChild(MatTable) sousTable: MatTable<GroupChiffrage>;
+
   constructor(public dialog: MatDialog) {}
   addData() {
     const dialogRef = this.dialog.open(DialogoverComponent, {
@@ -80,6 +85,7 @@ export interface PeriodicElement {
   PU: string;
   Total: string;
 }
+
 
 const GROUP_DATA: GroupChiffrage[] = [
   {
