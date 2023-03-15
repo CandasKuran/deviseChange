@@ -3,10 +3,10 @@
   <p>What's your favorite animal?</p>
   <mat-form-field appearance="fill">
     <mat-label>Favorite Animal</mat-label>
-    <input matInput >
+    <input matInput [(ngModel)]="data.Designation">
   </mat-form-field>
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button  cdkFocusInitial>Ok</button>
+  <button mat-button [mat-dialog-close]="data.Designation" cdkFocusInitial>Ok</button>
 </div>

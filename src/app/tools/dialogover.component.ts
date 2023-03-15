@@ -2,16 +2,16 @@ import {Component, Inject} from "@angular/core";
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 
 export interface DialogData {
-  name: string;
+  Designation: string;
 }
 @Component({
   selector: 'dialog-comp',
-  templateUrl: 'dialog.component.html',
-  styleUrls:["dialog.component.css"]
+  templateUrl: 'dialogover.component.html',
+  styleUrls:["dialogover.component.css"]
 })
-export class DialogComponent {
+export class DialogoverComponent {
   constructor(
-    public dialogRef: MatDialogRef<DialogComponent>,
+    public dialogRef: MatDialogRef<DialogoverComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData,
   ) {}
 

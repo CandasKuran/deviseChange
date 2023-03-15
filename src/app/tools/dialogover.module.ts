@@ -2,7 +2,7 @@ import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {DialogComponent} from "./dialog.component";
+import {DialogoverComponent} from "./dialogover.component";
 import {MatInputModule} from "@angular/material/input";
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatButtonModule} from "@angular/material/button";
@@ -11,7 +11,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
-    DialogComponent,
+    DialogoverComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,4 +26,4 @@ import { MatFormFieldModule } from '@angular/material/form-field';
   providers: [],
   bootstrap: [],
 })
-export class DialogModule { }
+export class DialogoverModule { }
