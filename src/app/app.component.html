@@ -35,7 +35,7 @@
 
       </button>
       <mat-menu #beforeMenu="matMenu" xPosition="before">
-        <button mat-menu-item (click)="addDataSousGroup()">
+        <button mat-menu-item (click)="addDataSousGroup(ligneData)">
           <mat-icon>queue</mat-icon>
           sous-group de chiffrage</button>
         <button mat-menu-item>
@@ -49,7 +49,14 @@
   </ng-container>
 
 
-    <table #sousTable></table>
+  <table mat-table [dataSource]="groupData" class="mat-elevation-z8" #sousTable>
+    <ng-container matColumnDef="{{column}}" *ngFor="let column of sousColumnsToDisplay">
+      <th mat-header-cell *matHeaderCellDef>{{column}}</th>
+      <td mat-cell *matCellDef="let element">{{element[column]}}</td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="sousColumnsToDisplay"></tr>
+    <tr mat-row *matRowDef="let row; columns: sousColumnsToDisplay;"></tr>
+  </table>
 
 
   <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->
